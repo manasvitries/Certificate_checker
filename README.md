@@ -1,4 +1,4 @@
-# 🚀 Project Name
+# 🚀 Certificate_checker
 
 A modern web application built with React, Vite, and Supabase, featuring secure user authentication and a clean, responsive dashboard.
 
