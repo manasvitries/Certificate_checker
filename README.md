@@ -76,4 +76,39 @@ npm run dev
 
 Open the local URL displayed in your terminal.
 
-### 6. Build for
+### 6. Build for production
+
+```bash
+npm run build
+```
+
+## 🌐 Deployment
+
+TrustChain is deployed using **Vercel**.
+
+Visit the live application:
+
+👉 https://trustchain-theta.vercel.app/
+
+## 🔒 Security
+
+- Supabase Row Level Security (RLS) policies protect database operations.
+- Role-based authorization restricts administrative functionality.
+- SHA-256 hashing helps detect certificate file modifications.
+- Blockchain transaction references provide a verifiable record of issuance and revocation.
+
+## 🎯 Project Objective
+
+The goal of TrustChain is to reduce certificate fraud and simplify academic credential verification through blockchain technology, cryptographic hashing, and secure digital record management.
+
+## 👩‍💻 Author
+
+**Manasvi Wairkar**
+
+B.Tech – Information Technology
+
+GitHub: [@manasvitries](https://github.com/manasvitries)
+
+---
+
+⭐ If you find this project interesting, consider giving the repository a star!
