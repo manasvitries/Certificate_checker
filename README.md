@@ -1,41 +1,50 @@
-# 🚀 Certificate_checker
+# 🔐 TrustChain – Blockchain-Based Certificate Verification
 
-A modern web application built with React, Vite, and Supabase, featuring secure user authentication and a clean, responsive dashboard.
+**TrustChain** is a secure certificate management and verification platform designed to make academic certificate verification more transparent, reliable, and tamper-resistant.
+
+🌐 **Live Demo:** https://trustchain-theta.vercel.app/
+
+📂 **GitHub Repository:** https://github.com/manasvitries/Certificate_checker
 
 ## ✨ Features
 
-- 🔐 **User Authentication** – Secure signup and login using Supabase.
-- 📧 **Email Verification** – Email confirmation for new accounts.
-- 🔑 **Password Recovery** – Forgot password and reset password functionality.
-- 🛡️ **Authentication Validation** – Handles invalid credentials and account registration scenarios.
-- 📊 **Dashboard** – Protected dashboard accessible after successful authentication.
-- 📱 **Responsive UI** – Clean interface designed for different screen sizes.
+- **Certificate Issuance:** Admins can issue and register certificates.
+- **Certificate Registry:** View and manage registered certificates.
+- **Blockchain Verification:** Verify certificate records using the Ethereum Sepolia test network.
+- **Integrity Verification:** Generate and compare SHA-256 hashes of certificate PDFs.
+- **Public Verification:** Verify certificates through a unique public verification link.
+- **QR Code Generation:** Generate QR codes for easy certificate verification.
+- **Certificate Revocation:** Revoke certificates and display their revocation status.
+- **Transaction Explorer:** View issuance and revocation transactions with blockchain explorer links.
+- **Role-Based Access:** Separate administrator functionality from regular authenticated users.
+- **Institution Management:** Save and manage institutional information.
+- **Secure Authentication:** User authentication and database management through Supabase.
 
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
 |---|---|
-| React.js | Frontend development |
+| React.js | Frontend |
 | Vite | Development and build tool |
-| JavaScript | Application logic |
-| Supabase | Authentication and backend services |
-| CSS | Styling |
-| Git & GitHub | Version control |
+| Tailwind CSS | Styling |
+| Supabase | Authentication and database |
+| Ethers.js | Ethereum blockchain interaction |
+| Ethereum Sepolia | Test blockchain network |
+| QRCode | QR code generation |
+| Vercel | Deployment |
 
-## ⚙️ Getting Started
-
-Follow these steps to run the project locally.
+## 🚀 Run Locally
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git clone https://github.com/manasvitries/Certificate_checker.git
 ```
 
 ### 2. Navigate to the project folder
 
 ```bash
-cd YOUR_REPOSITORY
+cd Certificate_checker/trustchain
 ```
 
 ### 3. Install dependencies
@@ -46,16 +55,18 @@ npm install
 
 ### 4. Configure environment variables
 
-Create a `.env` file in the root directory:
+Create a `.env.local` file inside the `trustchain` folder.
+
+Add your Supabase project credentials using the exact variable names expected by `src/lib/supabaseClient.js`.
+
+For example:
 
 ```env
 VITE_SUPABASE_URL=your_supabase_project_url
-VITE_SUPABASE_ANON_KEY=your_supabase_publishable_key
+VITE_SUPABASE_ANON_KEY=your_supabase_publishable_or_anon_key
 ```
 
-Add your own Supabase project credentials.
-
-**Never commit your `.env` file or Supabase secret/service-role keys to GitHub.**
+Never expose your Supabase service-role key or wallet private keys in frontend environment variables.
 
 ### 5. Start the development server
 
@@ -65,47 +76,4 @@ npm run dev
 
 Open the local URL displayed in your terminal.
 
-## 🔒 Security
-
-- Environment variables are excluded from version control.
-- Supabase handles authentication and email verification.
-- Protected routes restrict access to authenticated users.
-- Password recovery uses Supabase's secure authentication flow.
-
-## 📁 Project Structure
-
-```text
-project/
-├── public/
-├── src/
-│   ├── components/
-│   ├── lib/
-│   │   └── supabaseClient.js
-│   ├── App.jsx
-│   └── main.jsx
-├── .gitignore
-├── package.json
-└── vite.config.js
-```
-
-*The structure above is illustrative and may differ from the actual project.*
-
-## 🚧 Future Improvements
-
-- [ ] User profile management
-- [ ] Enhanced dashboard functionality
-- [ ] Additional authentication options
-- [ ] Improved accessibility
-- [ ] More interactive features
-
-## 👩‍💻 Author
-
-**Manasvi Wairkar**
-
-Aspiring Software Engineer | Web Developer
-
-[GitHub](https://github.com/YOUR_USERNAME)
-
----
-
-⭐ If you find this project interesting, consider giving it a star!
+### 6. Build for
